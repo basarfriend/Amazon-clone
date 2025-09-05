@@ -1,0 +1,298 @@
+<?DOCTYPE html!>  
+<html>  
+  <head>  
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />  
+    <title>level4</title>  
+    <link rel="stylesheet" href="style.css" />  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+  </head>  
+  <body>  
+  
+ <style>
+    /* Popup background */
+    #popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+      z-index: 9999;
+    }
+
+    /* Popup box */
+    #popup .box {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 10px;
+      font-size: 22px;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+      color: black;
+      max-width: 400px;
+      position: relative;
+    }
+
+    /* Close button */
+    #popup .close-btn {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      color: red;
+    }
+
+    /* Show class for popup */
+    #popup.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="popup">
+    <div class="box" 
+      <span class="close-btn" id="closePopup">&times;</span>
+      Dost developer mode me ya pc me use karo kya karu Devloper jhatu hai media query use karke mobile ke liye banane me isko maut aati hai sala ek number ka aalsi hai<b>Desktop Mode</b>  <b>PC</b>
+    </div>
+  </div>
+
+  <script>
+    function checkDevice() {
+      const popup = document.getElementById("popup");
+
+      // agar screen chhoti hai (mobile mode)
+      if (window.innerWidth < 980) {
+        popup.classList.add("show");  // dikhate raho
+      } else {
+        popup.classList.remove("show"); // desktop mode hai to hatado
+      }
+    }
+
+    // close button ka function
+    document.getElementById("closePopup").onclick = function() {
+      document.getElementById("popup").classList.remove("show");
+    }
+
+    // page load par aur resize hone par check karo
+    window.onload = checkDevice;
+    window.onresize = checkDevice;
+  </script>
+  
+    <header>  
+    <section id="top">
+      <div id="navbar">  
+        <div id="bar"><i class="fa-solid fa-bars"></i></div>  
+        <a href="https://www.amazon.in/"><img src="/1000002384-removebg-preview.png" alt="logo" id="logo" /></a>  
+        <div id="user">  
+          <p id="sign">Sign in ></p>  
+          <i class="fa-regular fa-user"></i>  
+        </div>  
+        <div id="cart"><i class="fa-solid fa-cart-shopping"></i  
+        <div id="search">  
+        <textarea name="searchbox" id=searchbox rows="3" cols="1">Search Amazon</textarea>  
+         <div id="find"><i class="fa-solid fa-magnifying-glass" id="mag"></i></div>  
+         <div id="line">  
+         <p class="tag" id="video">Video</p>  
+         <p class="tag" id="deals">Deals</p>  
+         <p class="tag" id="basics">Amazon Basics</p>  
+         <p class="tag" id="sellers">Beast Sellers</p>  
+         <p class="tag" id="live">Live Stream</p>  
+         <p class="tag" id="books">Books</p>  
+         </div>  
+        </div>  
+      </div>  
+      </section>
+    </header>  
+     <main>
+      <div id="loc">
+        <i id="map" class="fa-solid fa-location-dot"></i>
+        <select name="location" id="location" >
+          <option disabled selected>Deliver to India</option>
+          <option value="India">India</option>
+          <option value="Out of India">Out of India</option>
+        </select>
+         </div>
+      <div class="slide" id="s1"></div>
+      <div class="slide" id="s2"></div>
+      <div class="slide" id="s3"></div>
+      <div class="slide" id="s4"></div>
+      <div class="slide" id="s5"></div>
+      <div class="slide" id="s6"></div>
+      <div id="uppertext"><pre id="text">You are on amazon.com. You can also
+shop on Amazon India for million of
+    product with fast local delivery
+              click  <a id="link" href="https://www.amazon.in">here to go to amazon.in</a></pre></div>
+      <p id="signhint">Sign in for the beast experience</p>
+      <div id="signin"><p id="sign-in">Sign in securely</p></div>
+      <a style="color: royalblue;
+      display: inline-block;
+      margin-left: 70px; margin-top: 20px; font-size: 30px; text-decoration: none;"
+      href="https://youube.com">Create an Account</a>
+      <p id="pc">Score The top Pcs & accessories</p>
+      <div id="box1"></div>
+      <p style="color: black;
+      font-size: 50px;
+      margin-left: 140px;
+      ">Desktop</p>
+      
+      <div id="box2"></div>
+      <p style="color: black;
+      font-size: 50px;
+      margin-left: 640px;
+      margin-top: -650px;
+      ">Laptop</p>
+      
+      <div id="box3"></div>
+       <p style="color: black;
+      font-size: 50px;
+      margin-left: 50px;
+      ">PC Accessories</p>
+      
+      <div id="box4"></div>
+      <p style="color: black;
+      display: inline-block;
+      position: relative;
+      top: -610px;
+      left: 150px;
+      font-size: 50px;
+      ">Hard Drive</p>
+      <div style="width: 700px;
+      position: relative;
+      top: -600px;left: 50px ;font-size: 30px;
+      "><a style="color: royalblue;text-decoration: none;" href="https://www.amazon.in">See more</a></div>
+     <div style="color: black;font-size: 30px;font-weight: 900;
+     margin-top: -500px;margin-left: 20px;
+     ">Plug in with our electronics</div>
+     <div >
+     <div id="box5"></div>
+     <div id="box6"></div>
+     <p style="color: black;width: 200px;
+     font-size: 50px;position: relative; left: 100px;
+     ">Speakers</p>
+     <p style="color: black;width: 200px;
+     font-size: 50px;position: relative; left: 700px;top: -50px;
+     ">Watch</p>
+     <div id="box7"></div>
+     <div id="box8"></div>
+     <p style="color: black;width: 200px;
+     font-size: 50px;position: relative; left: 100px;
+     ">Headphone</p>
+        <p style="color: black;width: 200px;
+     font-size: 50px;position: relative; left: 700px;top: -50px;
+     ">Tablet</p></div>
+     <div  style="color: royalblue;font-size: 30px;display: inline-block;
+     position: relative; left: 50px;top: -50px;
+     ">See more</div>
+    
+    <div style="color: black;
+    font-weight: 900;font-size: 30px;
+    margin-left: 20px;
+    "
+    >Gear up to get fit</div>
+   
+    <div >
+     <div id="box9"></div>
+     <div id="box10"></div>
+     <p style="color: black;width: 200px;
+     font-size: 50px;position: relative; left: 100px;
+     ">Trackers</p>
+     <p style="color: black;width: 200px;
+     font-size: 50px;position: relative; left: 700px;top: -50px;
+     ">Deals</p>
+     <div id="box11"></div>
+     <div id="box12"></div>
+     <p style="color: black;width: 200px;
+     font-size: 50px;position: relative; left: 100px;
+     ">Clothing</p>
+        <p style="color: black;width: 200px;
+     font-size: 50px;position: relative; left: 700px;top: -50px;
+     ">Equipment</p></div>
+     <div style="color: royalblue;font-size: 30px;display: inline-block;
+     position: relative; left: 50px;top: -50px;
+     ">See more</div>
+    </main>
+    
+  <footer>
+    <div id="bottom">
+      <a 
+      href="#top" id="bottom_part">top</a>
+    </div>
+    <div id="bottom_2left">
+        <div class="bottom_2content">Your Amazon.in</div>
+        <div class="bottom_2content">Amazon Pay</div>
+        <div class="bottom_2content">Amzon Live</div>
+        <div class="bottom_2content">Your Account</div>
+        <div class="bottom_2content">Returns</div>
+        <div class="bottom_2content">Sell</div>
+      </div>
+    </div>
+    
+    <div id="bottom_2right">
+      
+      <div style="" class="bottom_2_right_content">Your Order</div>
+      
+      <div class="bottom_2_right_content">Amzon App Download </div>
+      
+      <div class="bottom_2_right_content">Your Lists</div>
+      
+      <div class="bottom_2_right_content">Your Recently Viewed Item</div>
+      
+      <div class="bottom_2_right_content">Recalls And Product Sefty Alert</div>
+      
+      <div class="bottom_2_right_content">Costumer Services</div>
+    
+      <div class="bottom_2_left_content">Your Order</div>
+      
+      <div class="bottom_2_left_content">Amazon App Download</div>
+      
+      <div class="bottom_2_left_content">Your Lists</div>
+      
+      <div class="bottom_2_left_content">Your Recently Viewed Item's</div>
+      
+      <div class="bottom_2_left_content">Recalls And Product Safety Alert</div>
+      
+      <div class="bottom_2_left_content">Costumer Service</div>
+    
+      <div id="antim">
+      <p style="font-size: 50px;
+      display: inline-block;
+      position: relative;
+      left: 370px;top: 100px;
+      "
+      >🇮🇳English- Ind    </p >
+      <p style="font-size: 30px;
+      position: relative;
+      top: 300px;left: 0px;
+      display: inline;
+      "
+      >Alreadya costumer? Sign in</p>
+      
+      <pre style="position: relative;
+      display: inline-block;
+      top:350px;left: 290px;
+      font-size: 20px;
+      ">Condition of us    privacy notice    intest based-ads</pre>
+      <div>
+        <pre style="display: inline-block;
+        position: relative;
+        top: 380px;left: 315px;
+        ">
+          ©1996-2025,Amazon.com,Inc and its affiliates 
+                                     ©Basar.laique
+        </pre>
+      </div>
+    </div>
+  </footer>
+  </body>  
+</html>
